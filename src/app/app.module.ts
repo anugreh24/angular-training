@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddEventComponent } from './events/add-event/add-event.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     EventsComponent,
     TicketsComponent,
     AboutComponent,
-    AddContactComponent
+    AddContactComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,

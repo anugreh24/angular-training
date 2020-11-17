@@ -37,7 +37,7 @@ export class AddContactComponent implements OnInit {
   }
 
   goToContactsHandler() {
-    this.router.navigate(['login']);
+    this.router.navigate(['']);
   }
 
 }

@@ -1,37 +1,28 @@
+<div class="alert alert-info" role="alert" style="text-align: center;">
+  Login portal
+</div>
+
+
 <link href="login.component.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="login-reg-panel">
-		<div class="login-info-box">
-			<h2>Have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-register" for="log-reg-show">Login</label>
-			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
-		</div>
-							
-		<div class="register-info-box">
-			<h2>Don't have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-login" for="log-login-show">Register</label>
-			<input type="radio" name="active-log-panel" id="log-login-show">
-		</div>
-							
-		<div class="white-panel">
-			<div class="login-show">
-				<h2>LOGIN</h2>
-				<input type="text" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="button" value="Login">
-				<a href="">Forgot password?</a>
-			</div>
-			<div class="register-show">
-				<h2>REGISTER</h2>
-				<input type="text" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="password" placeholder="Confirm Password">
-				<input type="button" value="Register">
-			</div>
-		</div>
-	</div>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <img src="data:image/png;base64,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" id="icon" alt="User Icon" />
+    </div>
+
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="email">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="http://localhost:4200/sign-up">Sign Up</a>
+    </div>
+
+  </div>
+</div>

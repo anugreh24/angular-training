@@ -1,1 +1,65 @@
-<p>events works!</p>
+<div class="alert alert-info" role="alert" style="text-align: center;">
+  Register for events here
+</div>
+
+<div class="container">
+    <div class="row">
+      <section class="col-sm-12 main-section ">
+        <div class="jumbotron">
+          <a class="btn btn-primary btn-lg" routerLink="/events/add" role="button">Create new event</a>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="width: 400px;" style="height: 400px;">
+          <img src="{{eventList[0].image}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{eventList[0].title}}</h5>
+            <p>{{eventList[0].description}}</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="width: 400px;" style="height: 400px;">
+          <img src="{{eventList[1].image}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{eventList[1].title}}</h5>
+            <p>{{eventList[1].description}}</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="width: 400px;" style="height: 400px;">
+          <img src="{{eventList[2].image}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{eventList[2].title}}</h5>
+            <p>{{eventList[2].description}}</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <br><br>
+  
+    <div class="row">
+
+  <div class="card" style="width: 18rem;" *ngFor="let event of eventList">
+    <img src="{{event.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{event.title}}</h5>
+      <p class="card-text">{{event.description}}</p>
+      <a href="#" class="btn btn-primary">Register</a>
+    </div>
+  </div>

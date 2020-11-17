@@ -1,0 +1,65 @@
+<div class="alert alert-info" role="alert" style="text-align: center;">
+  Create a new event here
+</div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-dark" (click)="goToEventsHandler()">Back to Events</button>
+      </div>
+      
+      <form class="col-md-6 offset-md-3" [formGroup]="eventForm" 
+      (ngSubmit)="addEventHandler()"> 
+        <div class="form-group row">
+          <label for="staticName" class="col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" 
+            [ngClass]="{ 'is-invalid': eventForm.get('title').touched 
+              && eventForm.get('title').invalid }"
+            placeholder="Enter Title" formControlName="title"/>  
+            <div class="invalid-feedback">
+              <div>Title is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="staticPhone" class="col-sm-2 col-form-label">Description</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" 
+            [ngClass]="{ 'is-invalid': eventForm.get('description').touched 
+            && eventForm.get('description').invalid }"
+            placeholder="Enter Description" formControlName="description"
+            />
+            <div class="invalid-feedback">
+              <div>Description is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Image Link</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" 
+            [ngClass]="{ 'is-invalid': eventForm.get('image').touched 
+            && eventForm.get('image').invalid }"
+            placeholder="Enter Image Link" formControlName="image"/>
+            <div class="invalid-feedback" 
+            *ngIf="eventForm.get('image').touched && eventForm.get('image').invalid" >
+              <div *ngIf="eventForm.get('image').errors?.required">Image is required</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="alert alert-success" *ngIf="isSaved">
+          Saved Successfully
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary" 
+            [disabled]="eventForm.invalid">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
