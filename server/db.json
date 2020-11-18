@@ -103,39 +103,33 @@
   "events": [
     {
       "id": 1,
-      "title": "abc",
-      "description": "def",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg"
+      "title": "Thanksgiving Party",
+      "description": "Join us for an all nighter. We offer plenty food options and drinks.",
+      "location": "ABC Club, 5th Ave, Seattle",
+      "time":"10pm PT",
+      "cost": "10$",
+      "date": "11/26/2020",
+      "image": "https://www.nationserve.com/wp-content/uploads/sites/36/2019/06/How-to-Host-a-Thanksgiving-Dinner-Party-in-Your-Garage.jpg"
     },
     {
       "id": 2,
-      "title": "abc",
-      "description": "def",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg"
+      "title": "Christmas Party",
+      "description": "Join us for lunch. We have a custom Christmas menu.",
+      "location": "XYZ Club, 7th Ave, Seattle",
+      "time":"1pm PT",
+      "cost": "20$",
+      "date": "12/25/2020",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/christmas-party-royalty-free-image-1568916152.jpg?crop=1.00xw:0.788xh;0,0&resize=1200:*"
     },
     {
       "id": 3,
-      "title": "abc",
-      "description": "def",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg"
-    },
-    {
-      "id": 4,
-      "title": "abc",
-      "description": "def",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg"
-    },
-    {
-      "id": 5,
-      "title": "abc",
-      "description": "def",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg"
-    },
-    {
-      "title": "halloween",
-      "description": "outside nyc location",
-      "image": "https://pyxis.nymag.com/v1/imgs/6a3/f5a/1531262ea5b41618f51259628d6c484a56-party-covid.rsquare.w1200.jpg",
-      "id": 6
+      "title": "New Year Party",
+      "description": "End of the year party with food, music and drinks. Fireworks starting midnight.",
+      "location": "DEF Club, 9th Ave, Seattle",
+      "time":"9pm PT",
+      "cost": "30$",
+      "date": "12/31/2020",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiuNELkKjL5gFrxJp4J5SFg6q5ET-URe1PLQ&usqp=CAU"
     }
   ]
 }

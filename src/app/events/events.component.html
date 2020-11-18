@@ -19,25 +19,43 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active" style="width: 400px;" style="height: 400px;">
+        <div class="carousel-item active" style="width: 400px;" style="height: 500px;">
           <img src="{{eventList[0].image}}" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>{{eventList[0].title}}</h5>
-            <p>{{eventList[0].description}}</p>
+          <div class="carousel-caption d-none d-md-block" >
+            <b><h1>{{eventList[0].title}}</h1>
+            <h3>
+              {{eventList[0].description}}<br>
+              {{eventList[0].date}}<br>
+              {{eventList[0].time}}<br>
+              {{eventList[0].cost}}<br>
+              {{eventList[0].location}}<br>
+            </h3></b>
           </div>
         </div>
-        <div class="carousel-item" style="width: 400px;" style="height: 400px;">
+        <div class="carousel-item" style="width: 400px;" style="height: 500px;">
           <img src="{{eventList[1].image}}" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>{{eventList[1].title}}</h5>
-            <p>{{eventList[1].description}}</p>
+          <div class="carousel-caption d-none d-md-block" >
+            <b><h1>{{eventList[1].title}}</h1>
+            <h3>
+              {{eventList[1].description}}<br>
+              {{eventList[1].date}}<br>
+              {{eventList[1].time}}<br>
+              {{eventList[1].cost}}<br>
+              {{eventList[1].location}}<br>
+            </h3></b>
           </div>
         </div>
-        <div class="carousel-item" style="width: 400px;" style="height: 400px;">
+        <div class="carousel-item" style="width: 400px;" style="height: 500px;">
           <img src="{{eventList[2].image}}" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>{{eventList[2].title}}</h5>
-            <p>{{eventList[2].description}}</p>
+          <div class="carousel-caption d-none d-md-block" >
+            <b><h1>{{eventList[2].title}}</h1>
+            <h3>
+              {{eventList[2].description}}<br>
+              {{eventList[2].date}}<br>
+              {{eventList[2].time}}<br>
+              {{eventList[2].cost}}<br>
+              {{eventList[2].location}}<br>
+            </h3></b>
           </div>
         </div>
       </div>
@@ -55,11 +73,11 @@
   
     <div class="row">
 
-  <div class="card" style="width: 18rem;" *ngFor="let event of eventList">
-    <img src="{{event.image}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{event.title}}</h5>
+  <div class="card" style="width: 23rem;" *ngFor="let event of eventList">
+    <img src="{{event.image}}" class="card-img-top" alt="..." style="height: 200px;">
+    <div class="card-body" style="color:darkblue;">
+      <h3 class="card-title">{{event.title}}</h3>
       <p class="card-text">{{event.description}}</p>
-      <a href="#" class="btn btn-primary">Register</a>
+      <a routerLink="/events/{{event.id}}" class="btn btn-primary">Learn More</a>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EventsService } from '../../shared/services/events.service';
@@ -8,7 +8,7 @@ import { EventsService } from '../../shared/services/events.service';
   templateUrl: './add-event.component.html',
   styleUrls: ['./add-event.component.css']
 })
-export class AddEventComponent implements OnInit {
+export class AddEventComponent implements OnInit, OnDestroy {
 
   eventForm: FormGroup;
 
@@ -19,8 +19,12 @@ export class AddEventComponent implements OnInit {
   ngOnInit(): void {
     this.eventForm = new FormGroup({
       title: new FormControl('', Validators.required), 
-      description: new FormControl('', [Validators.required, Validators.minLength(10)]),
-      image: new FormControl('')
+      description: new FormControl('', Validators.required),
+      location: new FormControl('', Validators.required), 
+      time: new FormControl('', Validators.required), 
+      cost: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required),
+      image: new FormControl('', Validators.required)
     });
   }
 
@@ -32,6 +36,10 @@ export class AddEventComponent implements OnInit {
         console.log(res);
         this.isSaved = true;
       });
+  }
+
+  ngOnDestroy():void{
+
   }
 
   goToEventsHandler(){

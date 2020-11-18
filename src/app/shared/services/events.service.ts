@@ -14,8 +14,6 @@ export class EventsService {
 
   createEvent(eventData){
     console.log(eventData);
-
-    // Method: POST
     return this.http.post(this.REST_API_URL, eventData)
       .pipe(map((res: any) => {
         console.log(res);
@@ -25,6 +23,15 @@ export class EventsService {
 
   getEvents(): Observable<any>{
     return this.http.get(this.REST_API_URL)
+      .pipe(map( (res: any) => {
+        console.log(res);
+        return res;
+      }));
+  }
+
+  getEvent(id){
+    console.log(id);
+    return this.http.get(this.REST_API_URL +  '/' + id)
       .pipe(map( (res: any) => {
         console.log(res);
         return res;

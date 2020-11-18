@@ -9,11 +9,14 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { EventsComponent } from './events/events.component';
 import { TicketsComponent } from './tickets/tickets.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './shared/about/about.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddEventComponent } from './events/add-event/add-event.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { RegisterComponent } from './events/register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,17 @@ import { AddEventComponent } from './events/add-event/add-event.component';
     TicketsComponent,
     AboutComponent,
     AddContactComponent,
-    AddEventComponent
+    AddEventComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

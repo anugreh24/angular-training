@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <h1 class="display-4">{{eventData.title}}</h1>
+    <p class="lead">{{eventData.description}}</p>
+    <hr class="my-4">
+    <p>Date - {{eventData.date}}<br>Time - {{eventData.time}}<br>Cost - {{eventData.cost}}<br>Location - {{eventData.location}}</p>
+    <br>
+    Tickets required - <input type="number" [(ngModel)]="cost"><br><br>
+    
+    Total cost ({{cost}} * {{eventData.cost}}) 
+    <br><br>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
+  </div>
+
+
+
